@@ -13,6 +13,7 @@ import About from './components/About';
 import Categories from './components/Categories';
 import { connect } from "react-redux";
 import {fetchCategory} from "./actions/category"
+import CategoriesShow from './components/CategoriesShow';
 
 import './App.css';
 
@@ -35,6 +36,10 @@ componentDidMount(){
          <Route exact path="/categories">
             <Categories categories={this.props.category}/>
           </Route>
+
+          <Route exact path="/categories/:id" 
+           render = {(props)=> <CategoriesShow {...props} categories={this.props.category}/>  }
+          />  
 
          </Switch>
 
