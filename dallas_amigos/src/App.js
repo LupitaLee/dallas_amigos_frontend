@@ -7,6 +7,9 @@ import {
   Route
 } from "react-router-dom";
 
+import Home from './components/Home';
+import Navigation from './components/Navigation';
+
 import './App.css';
 
 class App extends Component {
@@ -14,9 +17,19 @@ class App extends Component {
   render(){
 
     return (
-      <div className="App">
-     hi
-      </div>
+     <Router>
+       
+       <div className="App">
+       <Navigation/>
+         <Switch>
+         <Route exact path="/" component={Home}/>
+
+         </Switch>
+
+       </div>
+
+
+     </Router>
     );
   }
   
