@@ -11,6 +11,8 @@ import Home from './components/Home';
 import Navigation from './components/Navigation';
 import About from './components/About';
 import Categories from './components/Categories';
+import { connect } from "react-redux";
+import {fetchCategory} from "./actions/category"
 
 import './App.css';
 
