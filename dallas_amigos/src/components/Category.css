@@ -1,0 +1,18 @@
+.Category{
+    height: 50px;
+    width: 300px;
+    border-radius: 30px;
+    background: lightgray;
+    /* display: flex; */
+    justify-content: space-around;
+    /* align-items: center; */
+    margin-top: 10px;
+}
+
+
+
+.Category-link{
+    text-decoration: none;
+
+   
+}

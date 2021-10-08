@@ -18,6 +18,10 @@ import './App.css';
 
 class App extends Component {
 
+componentDidMount(){
+    this.props.fetchCategory()
+ }
+
   render(){
 
     return (
@@ -28,7 +32,9 @@ class App extends Component {
          <Switch>
          <Route exact path="/" component={Home}/>
          <Route exact path="/about" component={About}/>
-         <Route exact path="/about" component={Categories}/>
+         <Route exact path="/categories">
+            <Categories categories={this.props.category}/>
+          </Route>
 
          </Switch>
 
@@ -41,4 +47,11 @@ class App extends Component {
   
 }
 
-export default App;
+const mapStateToProps = state =>{
+  
+  return{
+    category: state.categoriesReducer.category
+  }
+}
+
+export default connect(mapStateToProps, {fetchCategory} )(App)
