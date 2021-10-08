@@ -11,7 +11,9 @@ const categoriesReducer = (state = initialState, action ) =>{
                 
                 //[...state.store, we are spreading what ever we have there already . ...action.payload] then we spread out the payload that we get from
             }
+            default:
+               return state
         }
     }
 
-    export default categoriesReducer
+export default categoriesReducer
