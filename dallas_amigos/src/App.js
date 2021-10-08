@@ -15,6 +15,8 @@ import { connect } from "react-redux";
 import {fetchCategory} from "./actions/category"
 import CategoriesShow from './components/CategoriesShow';
 
+import Posts from './components/Posts';
+
 import './App.css';
 
 class App extends Component {
@@ -40,6 +42,11 @@ componentDidMount(){
           <Route exact path="/categories/:id" 
            render = {(props)=> <CategoriesShow {...props} categories={this.props.category}/>  }
           />  
+
+          <Route path="/categories/:id/posts" 
+           render = {(props)=> <Posts {...props} categories={this.props.category}/>  }
+          />  
+
 
          </Switch>
 
