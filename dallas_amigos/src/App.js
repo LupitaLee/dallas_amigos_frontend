@@ -13,6 +13,7 @@ import About from './components/About';
 import Categories from './components/Categories';
 import { connect } from "react-redux";
 import {fetchCategory} from "./actions/category"
+import Footer from './components/Footer';
 
 
 import Posts from './components/Posts';
@@ -52,7 +53,7 @@ componentDidMount(){
 
 
          </Switch>
-
+         <Footer />
        </div>
 
 
