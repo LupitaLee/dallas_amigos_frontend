@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { createPost } from '../actions/category'
 
 export class PostForm extends Component {
     state = {
            
-        category_id: `${this.props.catObj.id}`,//comes from the posts Component
+        category_id: `${this.props.catObj.id}`, //comes from the posts Component
         title: "",
         content: ""
         
@@ -85,4 +87,4 @@ render() {
 }
 }
 
-export default PostForm
+export default connect (null,{createPost})(PostForm)
