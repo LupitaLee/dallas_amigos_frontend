@@ -1,6 +1,6 @@
 # DALLAS_AMIGOS
 
-Dallas Amigos is a single web application for the spanish community in the Dallas -FTW are in texas. with one the highes in the Spanish Comunity. this website is for the Spanish Comunity that wants to find what are the business in the area that are part of their culture. the whole website is in spanish, there categories and each category the user can post their own add and other people can view it from new business to searching for a a new taco place, and user can leave comments. clone the repo and enjoy seeing whats in your neigbor hood.
+Dallas Amigos is a single web application for the spanish community in the Dallas -FTW area in texas. with one the highes in the Spanish Comunity. this website is for the Spanish Comunity that wants to find what are the business in the area that are part of their culture. the whole website is in spanish, there categories and each category the user can post their own add and other people can view it from new business to searching for a new taco place, and user can leave comments. clone the repo and enjoy seeing whats in your neigbor hood.
 
 
 
