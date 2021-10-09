@@ -12,4 +12,13 @@ export class Comments extends Component {
     }
 }
 
-export default Comments
+
+
+const mapStateToProps = (state, ownProps)=> {
+
+    return {category: state.categoriesReducer.category[ownProps.match.params.id]}
+}
+
+
+// export default Posts
+export default connect (mapStateToProps, {fetchCategory})(Comments)
