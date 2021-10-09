@@ -1,0 +1,15 @@
+.About{
+    margin-top: 5%;
+}
+
+.About-title{
+
+    
+}
+
+.About-description{
+   /* min-width: min-content; */
+  border: 15px solid rgb(18, 90, 134);
+  padding: 50px;
+  margin: 20px;
+}
