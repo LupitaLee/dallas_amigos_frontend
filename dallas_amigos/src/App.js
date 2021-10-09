@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 
 
 import Posts from './components/Posts';
+import Comments from './components/Comments';
 
 import './App.css';
 
