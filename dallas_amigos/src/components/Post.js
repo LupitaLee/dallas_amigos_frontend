@@ -8,13 +8,18 @@ export class Post extends Component {
     
         return(
             <div className="Post">
-           <Link to={`/categories/${category_id}/posts/${id}/comments`}>
+           {/* <Link to={`/categories/${category_id}/posts/${id}/comments`}>
+           <h3>{title} </h3> 
+           
+           </Link>
+
+          */}
+          <Link to={`/posts/${id}/comments`}>
            <h3>{title} </h3> 
            
            </Link>
 
          
-          
           
             </div>
         )

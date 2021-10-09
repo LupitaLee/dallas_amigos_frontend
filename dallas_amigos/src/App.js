@@ -43,7 +43,7 @@ class App extends Component {
 
           <Route exact path="/categories/:id/posts" component={Posts}/>  
 
-          <Route exact path="/categories/:id/posts/:id/Comments" component={Comments}/>  
+          <Route exact path="/posts/:post_id/Comments" component={Comments}/>  
           {/* <Route exact path="/categories/:id" 
            render = {(props)=> <CategoriesShow {...props}/>   }
           />   */}

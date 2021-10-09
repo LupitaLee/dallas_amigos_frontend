@@ -1,17 +1,12 @@
 import React, { Component } from 'react'
 import Category from './Category'
 
-import { connect } from "react-redux";
-import {fetchCategory} from "../actions/category"
+
 
 export class Categories extends Component {
 
 
-    componentDidMount(){
-
-        this.props.fetchCategory()
-    }
-
+   
     
     render() {
         console.log(this.props)
@@ -28,13 +23,8 @@ export class Categories extends Component {
     }
 }
 
-// export default Categories
-
-const mapStateToProps = (state)=> {
-
-    return {category: state.categoriesReducer.category}
-}
+export default Categories
 
 
-// export default Posts
-export default connect (mapStateToProps, {fetchCategory})(Categories)
+
+

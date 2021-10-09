@@ -1,7 +1,6 @@
 import { post } from 'jquery';
 import React, { Component } from 'react'
-import { connect } from "react-redux";
-import { fetchCategory } from "../actions/category";
+
 import Post from './Post';
 import PostForm from './PostForm';
 
@@ -9,11 +8,7 @@ import PostForm from './PostForm';
 
 
 export class Posts extends Component {
-    componentDidMount(){
-
-        this.props.fetchCategory(this.props.match.params.id)
-    }
-
+   
 
 
     render() {
@@ -47,14 +42,6 @@ export class Posts extends Component {
     }
 }
 
-// export default Posts
+export default Posts
 
 
-const mapStateToProps = (state, ownProps)=> {
-
-    return {category: state.categoriesReducer.category[ownProps.match.params.id]}
-}
-
-
-// export default Posts
-export default connect (mapStateToProps, {fetchCategory})(Posts)

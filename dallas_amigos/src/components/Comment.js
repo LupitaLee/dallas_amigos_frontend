@@ -2,10 +2,15 @@ import React, { Component } from 'react'
 
 export class Comment extends Component {
     render() {
-        return (
-            <div>
-                comment
-            </div>
+        const { comment ,created_at, post_id} = this.props.co
+  
+       return(
+           <div className="Comment">
+           
+             <h6>{comment} - <strong>Posted on</strong> {created_at}</h6> 
+      
+
+           </div>
         )
     }
 }
