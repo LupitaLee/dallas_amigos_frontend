@@ -61,6 +61,7 @@ render() {
 
             value={this.state.name}
             onChange={this.handleChange}
+            required
             />
            <br></br>
 
@@ -75,6 +76,7 @@ render() {
            
             value={this.state.name}
             onChange={this.handleChange}
+            required
             >
             </textarea>
 
