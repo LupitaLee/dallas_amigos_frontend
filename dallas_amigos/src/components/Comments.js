@@ -9,7 +9,10 @@ import { fetchCategory } from "../actions/category";
 
 
 export class Comments extends Component {
+    componentDidMount(){
 
+        this.props.fetchCategory()
+    }
 
 
     render() {

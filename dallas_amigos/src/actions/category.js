@@ -82,6 +82,7 @@ export const createPost=(post)=>{
 
 
 export const addComment =(comObj)=>{
+    console.log("action add comment",comObj)
     return{
         type: "ADD_COMMENT",
         payload: comObj
