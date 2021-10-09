@@ -17,8 +17,8 @@ export class PostForm extends Component {
      this.setState({
          [e.target.name]: e.target.value
        })
-     //   console.log(e.target)
-     //   console.log(e.target.value)
+       
+       console.log(e.target.value)
  }
 
 
@@ -27,9 +27,9 @@ export class PostForm extends Component {
 
 handleSubmit =(e)=>{
    e.preventDefault()
-//    this.props.createPost(this.state)
+   this.props.createPost(this.state)
    this.setState({
-    // category_id: `${this.props.catObj.id}`,
+    // category_id: `${this.props.catObj.id}`, //comes from the posts Component
     title: "",
     content: ""
    
@@ -42,7 +42,7 @@ handleSubmit =(e)=>{
 
 render() {
  
-     //  console.log("Post form",this.props)
+    //   console.log("Post form",this.props)
     return (
      
 

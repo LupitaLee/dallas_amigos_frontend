@@ -4,6 +4,10 @@ import { fetchCategory } from "../actions/category";
 
 export class Comments extends Component {
 
+    componentDidMount(){
+
+        this.props.fetchCategory(this.props.match.params.id)
+    }
 
 
     render() {
