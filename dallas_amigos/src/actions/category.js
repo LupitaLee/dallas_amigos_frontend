@@ -89,4 +89,24 @@ export const addComment =(comObj)=>{
     }
 }
 
+export const createComment=(comment)=>{
+    return(dispatch)=> {
+
+
+        // console.log(post.category_id)
+        fetch(`http://localhost:3000/api/categories/${comment.category_id}/posts/${comment.post_id}/comments`,{
+            method: "Post",
+            headers:{
+                'Content-Type': 'application/json',
+                'accept': 'application/json'
+            },
+            body: JSON.stringify({comment}), 
+        })
+        .then(res => res.json())
+        .then(c =>{
+            // console.log("create commetnt",c)
+            dispatch(addComment(c))
+        })
+    }
+}
 
