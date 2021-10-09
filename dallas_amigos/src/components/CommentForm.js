@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 
 export class CommentForm extends Component {
     state ={
-        comment:''
+        comment:'',
+        category_id:  `${this.props.postObj.category_id}`,
+        post_id: `${this.props.postObj.id}`
     }
 
     handleSubmit = (e)=>{
@@ -11,7 +13,9 @@ export class CommentForm extends Component {
         
         this.setState({
         
-         comment: ''
+         comment: '',
+         category_id:  `${this.props.postObj.category_id}`,
+         post_id: `${this.props.postObj.id}`
          
         })
     }
