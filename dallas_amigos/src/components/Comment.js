@@ -2,7 +2,14 @@ import React, { Component } from 'react'
 
 export class Comment extends Component {
     render() {
-        const { comment ,created_at, post_id} = this.props.co
+        console.log("commets",this.props)
+        const { comment ,created_at }= this.props.co
+
+        if (comment.comments){
+            return null
+          }
+        
+   
   
        return(
            <div className="Comment">

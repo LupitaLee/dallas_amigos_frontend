@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { createComment } from '../actions/category'
 
 export class CommentForm extends Component {
     state ={
@@ -10,7 +12,7 @@ export class CommentForm extends Component {
     handleSubmit = (e)=>{
         e.preventDefault()
       
-        
+        this.props.createComment(this.state)
         this.setState({
         
          comment: '',
@@ -29,7 +31,9 @@ export class CommentForm extends Component {
 
     }
     render() {
+        console.log("comment form",this.props)
         return (
+
             <div>
                 <form onSubmit={this.handleSubmit}>
             
@@ -53,4 +57,4 @@ export class CommentForm extends Component {
     }
 }
 
-export default CommentForm
+export default connect(null, {createComment})(CommentForm)
