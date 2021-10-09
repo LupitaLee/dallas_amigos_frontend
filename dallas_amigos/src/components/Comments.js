@@ -3,7 +3,15 @@ import { connect } from "react-redux";
 import { fetchCategory } from "../actions/category";
 
 export class Comments extends Component {
+
+
+
     render() {
+
+        console.log("Comments",this.props)
+        // console.log("this.props.category",this.props.category)
+        // console.log("this.props.category.comments",this.props.category.posts)
+
         return (
             <div>
                 Comments

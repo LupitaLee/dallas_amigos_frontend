@@ -18,9 +18,9 @@ export class Posts extends Component {
 
     render() {
 
-        console.log("posts",this.props)
-        console.log("this.props.category",this.props.category)
-        console.log("this.props.category.posts",this.props.category.posts)
+        // console.log("posts",this.props)
+        // console.log("this.props.category",this.props.category)
+        // console.log("this.props.category.posts",this.props.category.posts)
        
         // const posts = this.props.category.posts.map((p)=> <Post key={p.id} p={p}/>)
         const {name ,posts} = this.props.category
