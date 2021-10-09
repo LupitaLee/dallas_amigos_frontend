@@ -40,7 +40,7 @@ export class Comments extends Component {
             <p>{post.content} </p> 
 
 
-          <CommentForm></CommentForm>
+          <CommentForm postObj={post}/>
           <h3>comments: </h3> 
          {comments}
           
