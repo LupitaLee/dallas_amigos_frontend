@@ -42,7 +42,7 @@ componentDidMount(){
 
           <Route exact path="/categories/:id/posts" component={Posts}/>  
 
-
+          <Route exact path="/posts/:id/Comments" component={Comments}/>  
           {/* <Route exact path="/categories/:id" 
            render = {(props)=> <CategoriesShow {...props}/>   }
           />   */}
