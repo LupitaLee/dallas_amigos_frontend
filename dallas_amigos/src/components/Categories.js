@@ -10,7 +10,7 @@ export class Categories extends Component {
     
     render() {
         console.log(this.props)
-        const categories = this.props.category.map((c, i) => <Category key={i} category={c}/> )
+        const categories = this.props.categories.map((c) => <Category key={c.id} category={c}/> )
  
        return(
            <div className="Categories">
