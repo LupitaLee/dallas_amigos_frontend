@@ -80,3 +80,13 @@ export const createPost=(post)=>{
 }
 
 
+
+export const addComment =(comObj)=>{
+    return{
+        type: "ADD_COMMENT",
+        payload: comObj
+        
+    }
+}
+
+
