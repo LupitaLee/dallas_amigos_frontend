@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class PostForm extends Component {
     state = {
            
-        // category_id: `${this.props.catObj.id}`,
+        category_id: `${this.props.catObj.id}`,//comes from the posts Component
         title: "",
         content: ""
         
@@ -29,7 +29,7 @@ handleSubmit =(e)=>{
    e.preventDefault()
    this.props.createPost(this.state)
    this.setState({
-    // category_id: `${this.props.catObj.id}`, //comes from the posts Component
+    category_id: `${this.props.catObj.id}`, //comes from the posts Component
     title: "",
     content: ""
    

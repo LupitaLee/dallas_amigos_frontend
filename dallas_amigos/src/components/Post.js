@@ -14,13 +14,9 @@ export class Post extends Component {
            
            </Link>
 
-         
-          
             </div>
         )
     }
 }
-
-
 
 export default Post

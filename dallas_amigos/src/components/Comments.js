@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
+import { Comment } from './Comment';
+
+
 import { connect } from "react-redux";
+import { fetchCategory } from "../actions/category";
+
 
 
 export class Comments extends Component {
@@ -9,37 +14,52 @@ export class Comments extends Component {
     render() {
 
         console.log("Comments",this.props)
-    //     console.log("this.props.category",this.props.category)
+    //  
+
+    const category1 = this.props.category.find(c => c.id === parseInt(this.props.match.params.category_id))
+    console.log(category1)
+    const post = category1.posts.find(c => c.id === parseInt(this.props.match.params.post_id))
+    console.log(post)
+
+// //
+
+//    const comments = post.comments.map((co) => <Comment key={co.id} co={co} />)
+//    console.log(post.comments)
+
+   let comments = []
+    if (post.comments){
+        comments = post.comments.map((co) => <Comment key={co.id} co={co} />)
+    }
        
-    //    const category2 = this.props.category.find(c => c.id ===  parseInt(this.props.match.params.category_id))
-    //    console.log("category2",category2)
-    //    const post2 = category2.posts.find(c => c.id === parseInt(this.props.match.params.post_id))
-    //    console.log("post2",post2)
+    
+    return(
+        <div className="Comments">
+          
+        <h1> {post.title}</h1>
+            <p>{post.content} </p> 
 
-    //    const comments = post2.comments.map((co) => <Comment key={co.id} co={co} />)
-    //   console.log("comments", comments)
-        // console.log("this.props.category.posts",this.props.category.posts)
 
-        // const {name ,posts} = this.props.category
-
-    //     const category1 = this.props.category.find(c => c.id === parseInt(this.props.match.params.category_id))
-    // console.log(category1)
-        // const {name ,posts} = this.props.category
-        // const posts1 = comments.map((p)=> <Comment key={c.id} co={co}/>)
-        //  const post2 = posts.map(p => p.title)
-
-        return (
-            <div>
-                Comments
-                {/* {comments} */}
-            </div>
-        )
+      // need to add comment form 
+          <h3>comments: </h3> 
+         {comments}
+          
+       
+        </div>
+    )
     }
 }
 
 
+// export default Comments
+const mapStateToProps = (state)=> {
+
+    return {category: state.categoriesReducer.category}
+}
 
 
 
-export default Comments
+export default connect (mapStateToProps, {fetchCategory})(Comments)
+
+
+
 

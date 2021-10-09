@@ -1,7 +1,7 @@
 
 import { Component} from "react";
 import Post from "./Post"
-import "./Posts.css"
+// import "./Posts.css"
 import PostForm from "./PostForm"
 
 import { connect } from "react-redux";
