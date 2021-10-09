@@ -37,20 +37,19 @@ componentDidMount(){
          <Switch>
          <Route exact path="/" component={Home}/>
          <Route exact path="/about" component={About}/>
-         <Route exact path="/categories" component={Categories}>
-     
+         <Route exact path="/categories">
+            <Categories categories={this.props.category}/>
           </Route>
 
-          <Route exact path="/categories/:id/posts" component={Posts}/>  
+          <Route exact path="/categories/:id/posts" 
+           render = {(props)=> <Posts {...props} categories={this.props.category}/>  }
+          />  
 
-          <Route exact path="/posts/:post_id/Comments" component={Comments}/>  
-          {/* <Route exact path="/categories/:id" 
-           render = {(props)=> <CategoriesShow {...props}/>   }
-          />   */}
+       
 
-          {/* <Route path="/categories/:id/posts" 
-           render = {(props)=> <Posts {...props} />  }
-          />   */}
+          <Route exact path="/categories/:category_id/posts/:post_id/comments" 
+           render = {(props)=> <Comments {...props} categories={this.props.category} />  }
+          />   
 
 
          </Switch>
