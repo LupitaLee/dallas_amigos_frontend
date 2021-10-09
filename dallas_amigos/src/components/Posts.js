@@ -1,47 +1,64 @@
-import { post } from 'jquery';
-import React, { Component } from 'react'
 
-import Post from './Post';
-import PostForm from './PostForm';
+import { Component} from "react";
+import Post from "./Post"
+import "./Posts.css"
+import PostForm from "./PostForm"
 
-
-
-
-export class Posts extends Component {
-   
+import { connect } from "react-redux";
+import { fetchCategory } from "../actions/category";
 
 
-    render() {
 
-        console.log("posts",this.props)
-        // console.log("this.props.category",this.props.category)
-        console.log("this.props.category.posts",this.props.category.posts)
+class Posts extends Component{
+
+    componentDidMount(){
+
+        this.props.fetchCategory()
+    }
+
+    
+    render(){
        
-        // const posts = this.props.category.posts.map((p)=> <Post key={p.id} p={p}/>)
-        const {name ,posts} = this.props.category
-       const posts1 = posts.map((p)=> <Post key={p.id} p={p}/>)
-        console.log("posts1",posts1)
-        // if (!this.props.categoy){
-        //     return <div>Loading...</div>
-        // }
-      
-        return (
-              <div className="Posts">
-                 
-           
-                <h1>{name}</h1>
+        console.log("posts components",this.props)
+       
+  
+        let category = this.props.category.find(c => c.id === parseInt(this.props.match.params.id))
+     console.log("======", category)
+        const posts = category.posts.map((p) => <Post key={p.id} p={p} category_id={category.id} />)
+        
+       
 
-                <PostForm></PostForm>
+        
+        return(
+            <div className="Posts">
 
-                {posts1}
+               <h1 className="Posts-category"> {category.name}</h1>
+
+               <div className="Post-Form">
+               <PostForm catObj={category}/>
+             
+               </div>
+             
+
+            <div className="Posts-items">
+            {posts}
+             
+             </div>
+                
                
-
-
             </div>
         )
     }
 }
 
-export default Posts
 
 
+// export default Posts
+
+const mapStateToProps = (state)=> {
+
+    return {category: state.categoriesReducer.category}
+}
+
+
+export default connect (mapStateToProps, {fetchCategory})(Posts)
