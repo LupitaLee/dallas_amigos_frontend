@@ -18,7 +18,7 @@ export class ImageSlider extends Component {
                 />
                 <Carousel.Caption>
                 <h3>Dallas - FTW </h3>
-                <p>business and more</p>
+                <p>Negocios y mas!</p>
                 
                 </Carousel.Caption>
             </Carousel.Item>
@@ -32,8 +32,8 @@ export class ImageSlider extends Component {
                 />
 
                 <Carousel.Caption>
-                <h3>Come find your favorite Restaurant</h3>
-                <p>the spanish Comunity</p>
+                <h3>Ven y encuentra tu Restaurante Favorito</h3>
+                <p>La Comunidad en Espanol</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
