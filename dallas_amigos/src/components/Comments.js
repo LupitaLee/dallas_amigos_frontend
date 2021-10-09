@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Comment } from './Comment';
+import CommentForm from './CommentForm';
 
 
 import { connect } from "react-redux";
@@ -39,7 +40,7 @@ export class Comments extends Component {
             <p>{post.content} </p> 
 
 
-      // need to add comment form 
+          <CommentForm></CommentForm>
           <h3>comments: </h3> 
          {comments}
           
