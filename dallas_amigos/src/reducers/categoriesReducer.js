@@ -33,6 +33,39 @@ const categoriesReducer = (state = initialState, action ) =>{
 
 
 
+            case "ADD_COMMENT":
+                // debugger
+                console.log("payload",action.payload)
+                console.log(state.category, "Redux ========")
+                const catIndex = state.category.findIndex( c => c.id  === action.payload.category_id)
+            //   console.log("catIndex",catIndex)
+                const postIndex = state.category[catIndex].posts.findIndex(co => co.id === action.payload.post_id)
+                // console.log("posttIndex",postIndex)
+
+                const updatedPost ={
+                    ...state.category[catIndex].posts[postIndex],
+                    comments: [...state.category[catIndex].posts[postIndex].comments, action.payload]
+                 }
+
+                const updatedCat1 ={
+                   
+                    ...state.category[catIndex],
+               
+                    posts: [...state.category[catIndex].posts.slice(0,postIndex), updatedPost, state.category[catIndex].posts.slice(postIndex+1)]
+                    
+                }
+              
+
+    
+                return{
+                    ...state, 
+                    category: [...state.category.slice(0,catIndex), updatedCat1, state.category.slice(catIndex+1)] 
+                }
+
+    
+
+
+
             default:
                return state
         }
