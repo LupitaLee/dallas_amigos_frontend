@@ -33,9 +33,10 @@ handleSubmit =(e)=>{
    e.preventDefault()
    this.props.createPost(this.state)
    this.setState({
-    category_id: `${this.props.catObj.id}`, //comes from the posts Component
+    // category_id: `${this.props.catObj.id}`, //comes from the posts Component
     title: "",
-    content: ""
+    content: "",
+    image: ""
    
     
    })

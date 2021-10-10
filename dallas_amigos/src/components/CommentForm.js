@@ -16,8 +16,8 @@ export class CommentForm extends Component {
         this.setState({
         
          comment: '',
-         category_id:  `${this.props.postObj.category_id}`,
-         post_id: `${this.props.postObj.id}`
+        //  category_id:  `${this.props.postObj.category_id}`,
+        //  post_id: `${this.props.postObj.id}`
          
         })
     }

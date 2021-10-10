@@ -14,7 +14,7 @@ export class Categories extends Component {
  
        return(
            <div className="Categories">
-               <h1>Categories List</h1>
+               <h1>Lista de Categorias</h1>
 
                {categories}
            
