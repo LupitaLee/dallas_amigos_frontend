@@ -41,11 +41,7 @@ $ npm start
 ```
 
 ## Sample Demo Video
-To look at a sample demo video click the link :
-
-
-
-
+To look at a sample demo video click the link :[here](https://drive.google.com/file/d/1ceK1LoqcRqZPeLhyNS3JpvLKHT73SuMe/view?usp=sharing).
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/LupitaLee/dallas_amigos_frontend. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/LupitaLee/dallas_amigos_frontend/blob/master/CODE_OF_CONDUCT.md).
