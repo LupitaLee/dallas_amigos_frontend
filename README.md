@@ -35,7 +35,7 @@ In order to run this application, for the frontend execute:
 ```
 $ npm install
 ```
-and right afeter
+and right after
 ```
 $ npm start
 ```

@@ -65,6 +65,16 @@ render() {
             />
            <br></br>
 
+            <label> Image</label>
+            <input
+            id="image"
+            type="file"
+            onChange={this.hanndleFileChange}
+            
+            />
+           
+
+
 
 
             <label>Content</label>
