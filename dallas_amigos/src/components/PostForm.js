@@ -7,7 +7,8 @@ export class PostForm extends Component {
            
         category_id: `${this.props.catObj.id}`, //comes from the posts Component
         title: "",
-        content: ""
+        content: "",
+        image: null
         
     
      
@@ -40,6 +41,18 @@ handleSubmit =(e)=>{
 }
 
 
+handleFileChange =(e)=>{
+    e.preventDefault()
+    this.props.createPost(this.state)
+   this.setState({
+
+    image: URL.createObjectURL(e.target.files[0])    
+   })
+   console.log("fileimage",e.target.files[0])
+
+}
+
+
 
 
 render() {
@@ -69,7 +82,7 @@ render() {
             <input
             id="image"
             type="file"
-            onChange={this.hanndleFileChange}
+            onChange={this.handleFileChange}
             
             />
            
