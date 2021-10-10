@@ -41,15 +41,11 @@ componentDidMount(){
             <Categories categories={this.props.category}/>
           </Route>
 
-          <Route exact path="/categories/:id/posts" 
-           render = {(props)=> <Posts {...props} categories={this.props.category}/>  }
-          />  
+          <Route exact path="/categories/:id/posts" component={Posts}/>  
 
        
 
-          <Route exact path="/categories/:category_id/posts/:post_id/comments" 
-           render = {(props)=> <Comments {...props} categories={this.props.category} />  }
-          />   
+          <Route exact path="/categories/:category_id/posts/:post_id/comments" component={Comments}/>   
 
 
          </Switch>

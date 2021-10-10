@@ -19,7 +19,7 @@ class Posts extends Component{
     
     render(){
        
-        console.log("posts components",this.props)
+        console.log("posts ",this.props)
        
   
         let category = this.props.category.find(c => c.id === parseInt(this.props.match.params.id))
