@@ -8,7 +8,8 @@ export class PostForm extends Component {
         category_id: `${this.props.catObj.id}`, //comes from the posts Component
         title: "",
         content: "",
-        image: null
+        image: ""
+        // image: null //for imagefile uploader
         
     
      
@@ -41,16 +42,17 @@ handleSubmit =(e)=>{
 }
 
 
-handleFileChange =(e)=>{
-    e.preventDefault()
-    this.props.createPost(this.state)
-   this.setState({
+// handleFileChange =(e)=>{
+//     e.preventDefault()
+//     this.props.createPost(this.state)
+//    this.setState({
 
-    image: URL.createObjectURL(e.target.files[0])    
-   })
-   console.log("fileimage",e.target.files[0])
+//     image: e.target.files[0]   
+//     // image: URL.createObjectURL(e.target.files[0])  // temporary image preview  
+//    })
+//    console.log("fileimage",e.target.files[0])
 
-}
+// }
 
 
 
@@ -78,13 +80,28 @@ render() {
             />
            <br></br>
 
-            <label> Image</label>
+            {/* <label> Image</label>
             <input
             id="image"
             type="file"
             onChange={this.handleFileChange}
             
+            /> */}
+             <br></br>
+
+            <label> image URL</label>
+            <input
+            id="image"
+           
+            name="image"
+            type="text"
+
+            value={this.state.name}
+            onChange={this.handleChange}
+            required
             />
+            
+            <br></br>
            
 
 
@@ -102,6 +119,7 @@ render() {
             required
             >
             </textarea>
+            <br></br>
 
                 <input type="submit" value="Add Post" />
             

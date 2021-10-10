@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Comment } from './Comment';
 import CommentForm from './CommentForm';
+import "../App.css"
 
 
 import { connect } from "react-redux";
@@ -41,7 +42,7 @@ export class Comments extends Component {
           
         <h1> {post.title}</h1>
             <p>{post.content} </p> 
-            <img src={post.image}/>
+            <img className="image" src={post.image}/>
 
 
           <CommentForm postObj={post}/>
