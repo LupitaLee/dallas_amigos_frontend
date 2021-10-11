@@ -4,7 +4,7 @@ import { createComment } from '../actions/category'
 
 export class CommentForm extends Component {
     state ={
-        comment:'',
+        comment:"",
         category_id:  `${this.props.postObj.category_id}`,
         post_id: `${this.props.postObj.id}`
     }
@@ -15,9 +15,9 @@ export class CommentForm extends Component {
         this.props.createComment(this.state)
         this.setState({
         
-         comment: '',
-        //  category_id:  `${this.props.postObj.category_id}`,
-        //  post_id: `${this.props.postObj.id}`
+         comment: "",
+         category_id: "",
+         post_id: ""
          
         })
     }
@@ -25,7 +25,7 @@ export class CommentForm extends Component {
     
     handleChange = (e)=>{
         this.setState({
-            [e.target.name]: e.target.value
+            comment: e.target.value
         })
     //    console.log(e.target.value)
 
@@ -44,7 +44,7 @@ export class CommentForm extends Component {
                 name="comment"
                 type="text"
                 
-                value={this.state.name}
+                value={this.state.comment}
                 onChange={this.handleChange}
                 required
                 >
