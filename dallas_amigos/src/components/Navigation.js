@@ -1,7 +1,10 @@
 
 
 import React, { Component } from 'react'
-import {Navbar, Container, Nav} from "react-bootstrap";
+import {Navbar, Container, Nav,FormControl,Button,Form} from "react-bootstrap";
+import SearchPage from './SearchPage';
+// import { MDBCol } from "mdbreact";
+
 
 export default class Navigation extends Component {
     render() {
@@ -23,8 +26,11 @@ export default class Navigation extends Component {
                    <NavDropdown.Divider />
                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                   </NavDropdown> */}
+            
                </Nav>
+               
              </Navbar.Collapse>
+             <SearchPage/>
            </Container>
          </Navbar>
                 
@@ -32,5 +38,4 @@ export default class Navigation extends Component {
         )
     }
 }
-
 
