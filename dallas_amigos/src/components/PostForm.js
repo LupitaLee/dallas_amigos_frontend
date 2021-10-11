@@ -17,30 +17,52 @@ export class PostForm extends Component {
     }
 
  
- handleChange =(e)=>{
-     this.setState({
-         [e.target.name]: e.target.value
-       })
+    handleChange =(e)=>{
+        this.setState({
+        
+            title: e.target.value
        
-       console.log(e.target.value)
- }
-
-
-   
-
-
-handleSubmit =(e)=>{
-   e.preventDefault()
-   this.props.createPost(this.state)
-   this.setState({
-    // category_id: `${this.props.catObj.id}`, //comes from the posts Component
-    title: "",
-    content: "",
-    image: ""
-   
+          })
     
-   })
-}
+    }
+    handleChange1 =(e)=>{
+        this.setState({
+        
+            image: e.target.value
+           
+
+          })
+      
+        
+    }
+
+    handleChange2 =(e)=>{
+        this.setState({
+        
+            content: e.target.value
+           
+
+          })
+      
+        
+    }
+
+
+
+
+
+    handleSubmit =(e)=>{
+    e.preventDefault()
+    this.props.createPost(this.state)
+    this.setState({
+        category_id: "", //comes from the posts Component
+        title: "",
+        content: "",
+        image: ""
+    
+        
+    })
+    }
 
 
 // handleFileChange =(e)=>{
@@ -75,7 +97,7 @@ render() {
             name="title"
             type="text"
 
-            value={this.state.name}
+            value={this.state.title}
             onChange={this.handleChange}
             required
             />
@@ -97,8 +119,8 @@ render() {
             name="image"
             type="text"
 
-            value={this.state.name}
-            onChange={this.handleChange}
+            value={this.state.image}
+            onChange={this.handleChange1}
             required
             />
             
@@ -115,8 +137,8 @@ render() {
             name="content"
             type="text"
            
-            value={this.state.name}
-            onChange={this.handleChange}
+            value={this.state.content}
+            onChange={this.handleChange2}
             required
             >
             </textarea>
