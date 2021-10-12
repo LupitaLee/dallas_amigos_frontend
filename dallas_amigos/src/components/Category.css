@@ -1,7 +1,7 @@
 .Category{
     height: 50px;
     width: 300px;
-    border-radius: 30px;
+    border-radius: 10px;
     background: lightgray;
     /* display: flex; */
     justify-content: space-around;

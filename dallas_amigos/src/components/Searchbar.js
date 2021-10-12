@@ -36,7 +36,6 @@ export class Searchbar extends Component {
       <Form line>
         <FormControl type="text" placeholder="Search" onChange={this.handleChange}  className="-sm ml-3 w-50" />
       
-        {/* <Button variant="outline-success">Search</Button> */}
 
         {filteredCategories}
 

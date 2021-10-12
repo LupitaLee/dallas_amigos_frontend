@@ -25,7 +25,7 @@ class Posts extends Component{
        
   
         let category = this.props.category.find(c => c.id === parseInt(this.props.match.params.id))
-    //  console.log("======", category)
+  
         const posts = category.posts.map((p) => <Post key={p.id} p={p} category_id={category.id} />)
         
        

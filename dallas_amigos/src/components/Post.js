@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import "./Post.css"
+import Moment from 'moment'
 import { Table } from 'react-bootstrap'
 
 export class Post extends Component {
@@ -26,7 +26,7 @@ export class Post extends Component {
                     
                         </Link>
                     </td>
-                    <td>{created_at}</td>
+                    <td>{Moment(created_at).format('MM-DD-YYYY')}</td>
                     
                     </tr>
                     

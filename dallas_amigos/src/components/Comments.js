@@ -18,18 +18,15 @@ export class Comments extends Component {
 
     render() {
 
-        console.log("Comments",this.props)
-    //  
+        // console.log("Comments",this.props)
+  
 
     const category1 = this.props.category.find(c => c.id === parseInt(this.props.match.params.category_id))
     console.log(category1)
     const post = category1.posts.find(c => c.id === parseInt(this.props.match.params.post_id))
     console.log(post)
 
-// //
 
-//    const comments = post.comments.map((co) => <Comment key={co.id} co={co} />)
-//    console.log(post.comments)
 
    let comments = []
     if (post.comments){
@@ -56,7 +53,7 @@ export class Comments extends Component {
 }
 
 
-// export default Comments
+
 const mapStateToProps = (state)=> {
 
     return {category: state.categoriesReducer.category}
