@@ -52,10 +52,11 @@ class Posts extends Component{
                     <th>posted date</th>
                     
                     </tr>
-                    {posts}
+                   
                 </thead>
+                
                 </Table>
-           
+                {posts}
              
              </div>
                 

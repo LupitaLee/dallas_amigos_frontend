@@ -1,11 +1,11 @@
-.Post{
+/* .Post{
     height: 50px;
     width: 300px;
-    /* border-radius: 10px; */
+   
     background: rgb(151, 208, 227);
-    /* display: flex; */
+
     justify-content: space-around;
-    /* align-items: center; */
+  
     margin-top: 10px;
     margin-left: 10px;
     
@@ -14,4 +14,4 @@
 
 .Post-link{
     text-decoration: none;
-}
+} */
