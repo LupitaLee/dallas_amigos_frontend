@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Category from './Category'
+// import Category from './Category'
 import { connect } from "react-redux";
 import { fetchCategory } from "../actions/category";
 import Searchbar from './Searchbar';

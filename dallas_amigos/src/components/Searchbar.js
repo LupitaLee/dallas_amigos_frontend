@@ -22,6 +22,14 @@ export class Searchbar extends Component {
   render() {
     console.log(this.props)
 
+    const filteredCategories = this.props.categories.filter((ca)=>{
+      if (this.state.searchterm == ""){
+        return ca 
+      } else if (ca.name.toLowerCase().includes(this.state.searchterm.toLowerCase())){
+        return ca
+      }
+    }).map((c) => <Category key={c.id} category={c}/> )
+
     return (
       <div>
         
@@ -30,13 +38,7 @@ export class Searchbar extends Component {
       
         {/* <Button variant="outline-success">Search</Button> */}
 
-        {this.props.categories.filter((ca)=>{
-          if (this.state.searchterm == ""){
-            return ca 
-          } else if (ca.name.toLowerCase().includes(this.state.searchterm.toLowerCase())){
-            return ca
-          }
-        }).map((c) => <Category key={c.id} category={c}/> )}
+        {filteredCategories}
 
 
        

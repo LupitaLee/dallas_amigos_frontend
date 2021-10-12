@@ -3,7 +3,7 @@ import { Component} from "react";
 import Post from "./Post"
 import "./Posts.css"
 import PostForm from "./PostForm"
-import SearchBar from "./Searchbar";
+
 
 import { connect } from "react-redux";
 import { fetchCategory } from "../actions/category";
@@ -33,7 +33,8 @@ class Posts extends Component{
         return(
             <div className="Posts">
                
-
+           
+            
                <h1 className="Posts-category"> {category.name}</h1>
 
                <div className="Post-Form">

@@ -1,3 +1,10 @@
-.Post-form{
-    text-align: canter;
+.Post-Form{
+    text-align:center;
+}
+
+.Posts-category{
+    text-align: center;
+
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
