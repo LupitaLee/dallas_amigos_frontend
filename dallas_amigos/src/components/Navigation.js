@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import {Navbar, Container, Nav,FormControl,Button,Form} from "react-bootstrap";
-import SearchPage from './SearchPage';
+// import SearchPage from './SearchPage';
 // import { MDBCol } from "mdbreact";
 
 
@@ -30,7 +30,7 @@ export default class Navigation extends Component {
                </Nav>
                
              </Navbar.Collapse>
-             <SearchPage/>
+             {/* <SearchPage/> */}
            </Container>
          </Navbar>
                 

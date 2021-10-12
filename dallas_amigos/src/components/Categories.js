@@ -1,30 +1,43 @@
 import React, { Component } from 'react'
 import Category from './Category'
-
-
+import { connect } from "react-redux";
+import { fetchCategory } from "../actions/category";
+import Searchbar from './Searchbar';
 
 export class Categories extends Component {
 
+    componentDidMount(){
+    this.props.fetchCategory()
+    }
+
 
    
-    
+ 
     render() {
         console.log(this.props)
-        const categories = this.props.categories.map((c) => <Category key={c.id} category={c}/> )
- 
+       
        return(
+        
            <div className="Categories">
+             
+
                <h1>Lista de Categorias</h1>
 
-               {categories}
+               <Searchbar categories={this.props.category}/>
            
            </div>
        )
     }
 }
 
-export default Categories
+const mapStateToProps = state =>{
+  
+    return{
+      category: state.categoriesReducer.category
+    }
+  }
 
-
-
-
+  export default connect(mapStateToProps, {fetchCategory} )(Categories)
+  
+  
+  

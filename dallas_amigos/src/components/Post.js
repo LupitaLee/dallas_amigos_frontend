@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import "./Post.css"
 
 export class Post extends Component {
     render() {
@@ -9,7 +10,7 @@ export class Post extends Component {
         return(
             <div className="Post">
          
-          <Link to={`/categories/${category_id}/posts/${id}/comments`}>
+          <Link className="Post-link" to={`/categories/${category_id}/posts/${id}/comments`}>
            <h3>{title} </h3> 
            
            </Link>

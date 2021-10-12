@@ -3,7 +3,7 @@
 //lets our actions return a function
 //this lets us use redux async
 
-// also allows us to passa function to dispatch...
+// also allows us to pass a function to dispatch...
 
 export const fetchCategory = ()=>{
     return(dispatch)=>{ 

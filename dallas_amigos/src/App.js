@@ -11,8 +11,7 @@ import Home from './components/Home';
 import Navigation from './components/Navigation';
 import About from './components/About';
 import Categories from './components/Categories';
-import { connect } from "react-redux";
-import {fetchCategory} from "./actions/category"
+
 import Footer from './components/Footer';
 
 
@@ -23,9 +22,7 @@ import './App.css';
 
 class App extends Component {
 
-componentDidMount(){
-    this.props.fetchCategory()
- }
+
 
   render(){
 
@@ -37,9 +34,8 @@ componentDidMount(){
          <Switch>
          <Route exact path="/" component={Home}/>
          <Route exact path="/about" component={About}/>
-         <Route exact path="/categories">
-            <Categories categories={this.props.category}/>
-          </Route>
+         <Route exact path="/categories" component={Categories}/>
+         
 
           <Route exact path="/categories/:id/posts" component={Posts}/>  
 
@@ -59,13 +55,5 @@ componentDidMount(){
   
 }
 
-const mapStateToProps = state =>{
-  
-  return{
-    category: state.categoriesReducer.category
-  }
-}
-
-export default connect(mapStateToProps, {fetchCategory} )(App)
-
+export default App
 
