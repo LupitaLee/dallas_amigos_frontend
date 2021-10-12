@@ -3,6 +3,7 @@ import { Component} from "react";
 import Post from "./Post"
 import "./Posts.css"
 import PostForm from "./PostForm"
+import { Table } from "react-bootstrap";
 
 
 import { connect } from "react-redux";
@@ -44,7 +45,17 @@ class Posts extends Component{
              
 
             <div className="Posts-items">
-            {posts}
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                    <th>Title</th>
+                    <th>posted date</th>
+                    
+                    </tr>
+                    {posts}
+                </thead>
+                </Table>
+           
              
              </div>
                 
