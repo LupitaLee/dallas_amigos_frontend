@@ -45,8 +45,8 @@ class Posts extends Component{
              
 
             <div className="Posts-items">
-            <Table striped bordered hover>
-                <thead>
+            <Table striped bordered hover >
+                <thead >
                     <tr>
                     <th>Title</th>
                     <th>posted date</th>

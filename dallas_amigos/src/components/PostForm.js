@@ -9,14 +9,10 @@ export class PostForm extends Component {
         title: "",
         content: "",
         image: ""
-        // image: null //for imagefile uploader
-        
-    
-     
         
     }
 
- 
+
     handleChange =(e)=>{
         this.setState({
         
@@ -49,8 +45,6 @@ export class PostForm extends Component {
 
 
 
-
-
     handleSubmit =(e)=>{
     e.preventDefault()
     this.props.createPost(this.state)
@@ -63,19 +57,6 @@ export class PostForm extends Component {
         
     })
     }
-
-
-// handleFileChange =(e)=>{
-//     e.preventDefault()
-//     this.props.createPost(this.state)
-//    this.setState({
-
-//     image: e.target.files[0]   
-//     // image: URL.createObjectURL(e.target.files[0])  // temporary image preview  
-//    })
-//    console.log("fileimage",e.target.files[0])
-
-// }
 
 
 
@@ -103,13 +84,7 @@ render() {
             />
            <br></br>
 
-            {/* <label> Image</label>
-            <input
-            id="image"
-            type="file"
-            onChange={this.handleFileChange}
-            
-            /> */}
+           
              <br></br>
 
             <label> image URL</label>
@@ -127,9 +102,6 @@ render() {
             <br></br>
            
 
-
-
-
             <label>Content</label>
             <textarea
             id="content"
@@ -144,10 +116,13 @@ render() {
             </textarea>
             <br></br>
 
-                <input type="submit" value="Add Post" />
+                <input type="submit" value="Post an Ad" />
             
 
             </form>
+
+
+
         </div>
     )
 }

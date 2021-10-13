@@ -1,9 +1,7 @@
 
 
 import React, { Component } from 'react'
-import {Navbar, Container, Nav,FormControl,Button,Form} from "react-bootstrap";
-// import SearchPage from './SearchPage';
-// import { MDBCol } from "mdbreact";
+import {Navbar, Container, Nav} from "react-bootstrap";
 
 
 export default class Navigation extends Component {
@@ -17,8 +15,8 @@ export default class Navigation extends Component {
              <Navbar.Collapse id="basic-navbar-nav">
                <Nav className="me-auto">
          
-                 <Nav.Link href="/about">About</Nav.Link>
-                 <Nav.Link href="/categories">Category</Nav.Link>
+                 <Nav.Link href="/about">Sobre Nosotros</Nav.Link>
+                 <Nav.Link href="/categories">Categorias</Nav.Link>
             
                </Nav>
                

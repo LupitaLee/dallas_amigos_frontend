@@ -39,7 +39,7 @@ export class Comments extends Component {
           
         <h1> {post.title}</h1>
             <p>{post.content} </p> 
-            <img className="image" src={post.image}/>
+            <img className="image" src={post.image} alt=""/>
 
 
           <CommentForm postObj={post}/>

@@ -36,7 +36,7 @@ const categoriesReducer = (state = initialState, action ) =>{
             case "ADD_COMMENT":
                 // debugger
                 console.log("payload",action.payload)
-                console.log(state.category, "Redux ========")
+               
                 const catIndex = state.category.findIndex( c => c.id  === action.payload.category_id)
             //   console.log("catIndex",catIndex)
                 const postIndex = state.category[catIndex].posts.findIndex(co => co.id === action.payload.post_id)
