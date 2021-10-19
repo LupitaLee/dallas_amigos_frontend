@@ -16,6 +16,7 @@ export default class Navigation extends Component {
                <Nav className="me-auto">
          
                  <Nav.Link href="/about">Sobre Nosotros</Nav.Link>
+                
                  <Nav.Link href="/categories">Categorias</Nav.Link>
             
                </Nav>

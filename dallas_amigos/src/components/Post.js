@@ -4,9 +4,29 @@ import Moment from 'moment'
 import { Table } from 'react-bootstrap'
 
 export class Post extends Component {
+
+    state={
+        count:0
+
+    }
+
+    handleChange =()=>{
+        let newCount = this.state.count +1
+        this.setState({
+            count: newCount
+        })
+        console.log(newCount)
+    }
+ 
+
+
+
     render() {
-        console.log("post==== ", this.props)
+        // console.log("post==== ", this.props)
         const {title ,id, category_id , created_at} = this.props.p
+
+
+       
     
         return(
             <div className="Post">
@@ -32,6 +52,8 @@ export class Post extends Component {
                     
                 </tbody>
             </Table>
+
+            <button onClick={this.handleChange}>like {this.state.count} </button>
 
             </div>
         )

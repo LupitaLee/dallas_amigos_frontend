@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 
 import Posts from './components/Posts';
 import Comments from './components/Comments';
+import Parent from './components/Parent';
 
 import './App.css';
 
@@ -32,7 +33,8 @@ class App extends Component {
        <Navigation/>
          <Switch>
          <Route exact path="/" component={Home}/>
-         <Route exact path="/about" component={About}/>
+         <Route exact path="/parent" component={Parent}/>
+         <Route  path="/about" component={About}/>
          <Route exact path="/categories" component={Categories}/>
          
 
