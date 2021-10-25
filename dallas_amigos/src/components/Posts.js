@@ -61,7 +61,8 @@ class Posts extends Component{
                 </thead>
                 
                 </Table>
-                {posts}
+                {/* {posts} */}
+                {sortedPosts}
              
              </div>
                 
