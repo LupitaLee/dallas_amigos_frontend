@@ -26,9 +26,14 @@ class Posts extends Component{
   
         let category = this.props.category.find(c => c.id === parseInt(this.props.match.params.id))
   
-        const posts = category.posts.map((p) => <Post key={p.id} p={p} category_id={category.id} />)
+        // const posts = category.posts.map((p) => <Post key={p.id} p={p} category_id={category.id} />)
         
-       
+        const sortedPosts = category.posts.sort((a,b)=>{
+            if (a.created_at < b.created_at) return 1
+            return -1
+        }).map((p) => <Post key={p.id} p={p} category_id={category.id} />)
+     
+ 
 
         
         return(

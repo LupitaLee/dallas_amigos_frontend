@@ -43,7 +43,8 @@ class App extends Component {
        
        <div className="App">
       
-       <input type="checkbox" onChange={this.handleChange}/>
+       <input type="checkbox" onChange={this.handleChange}></input>
+      
 
        <Navigation/>
          <Switch>
