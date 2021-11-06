@@ -33,7 +33,7 @@ class Posts extends Component{
             return -1
         }).map((p) => <Post key={p.id} p={p} category_id={category.id} />)
      
- 
+        console.log(sortedPosts)
 
         
         return(
