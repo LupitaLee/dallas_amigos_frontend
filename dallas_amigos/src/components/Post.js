@@ -22,7 +22,7 @@ export class Post extends Component {
 
 
     render() {
-        // console.log("post==== ", this.props)
+       
         const {title ,id, category_id , created_at} = this.props.p
 
 
@@ -31,10 +31,7 @@ export class Post extends Component {
         return(
             <div className="Post">
          
-                {/* <Link className="Post-link" to={`/categories/${category_id}/posts/${id}/comments`}>
-                <h3>{title} </h3> 
-                
-                </Link> */}
+            
 
             <Table striped bordered hover>
   

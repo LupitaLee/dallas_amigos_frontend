@@ -49,7 +49,7 @@ export class PostForm extends Component {
     e.preventDefault()
     this.props.createPost(this.state)
     this.setState({
-        category_id: "", //comes from the posts Component
+        
         title: "",
         content: "",
         image: ""

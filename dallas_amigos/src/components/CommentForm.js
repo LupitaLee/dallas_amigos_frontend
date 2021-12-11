@@ -16,8 +16,7 @@ export class CommentForm extends Component {
         this.setState({
         
          comment: "",
-         category_id: "",
-         post_id: ""
+       
          
         })
     }

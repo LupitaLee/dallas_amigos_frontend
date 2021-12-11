@@ -54,7 +54,7 @@ const categoriesReducer = (state = initialState, action ) =>{
                     posts: [...state.category[catIndex].posts.slice(0,postIndex), updatedPost, state.category[catIndex].posts.slice(postIndex+1)]
                     
                 }
-              
+              debugger
 
     
                 return{
