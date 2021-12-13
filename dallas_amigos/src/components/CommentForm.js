@@ -20,7 +20,7 @@ export class CommentForm extends Component {
          
         })
     }
-    fds dsffdfdf
+  
     
     handleChange = (e)=>{
         this.setState({
@@ -30,7 +30,7 @@ export class CommentForm extends Component {
 
     }
     render() {
-        console.log("comment form",this.props)
+        // console.log("comment form",this.props)
         return (
 
             <div>

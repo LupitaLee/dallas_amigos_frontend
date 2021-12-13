@@ -24,17 +24,7 @@ import './App.css';
 class App extends Component {
 
 
-  state ={
-    darkMode: false
-  
-  }
-  handleChange = () => {
-    this.setState({
-      darkMode: document.body.classList.toggle("dark")
-     
-    })
-  }
-  
+
 
   render(){
 
@@ -43,7 +33,7 @@ class App extends Component {
        
        <div className="App">
       
-       <input type="checkbox" onChange={this.handleChange}></input>
+      
       
 
        <Navigation/>
