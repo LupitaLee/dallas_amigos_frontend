@@ -4,7 +4,7 @@ import Moment from 'moment'
 
 export class Comment extends Component {
     render() {
-        console.log("commets",this.props)
+        // console.log("commets",this.props)
         const { comment ,created_at }= this.props.co
 
         const date = Moment(created_at).format('MM-DD-YYYY')

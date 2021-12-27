@@ -22,9 +22,9 @@ export class Comments extends Component {
   
 
     const category1 = this.props.category.find(c => c.id === parseInt(this.props.match.params.category_id))
-    console.log(category1)
+    // console.log(category1)
     const post = category1.posts.find(c => c.id === parseInt(this.props.match.params.post_id))
-    console.log(post)
+    // console.log(post)
 
 
 
