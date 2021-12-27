@@ -7,6 +7,12 @@ export class SignUp extends Component {
         email:'',
         password: ''
     }
+
+    handleChange = (event)=> {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
     render() {
         return (
             <div>
