@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const SignUp = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+export class SignUp extends Component {
+
+    state = {
+        username:'',
+        email:'',
+        password: ''
+    }
+    render() {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
 }
 
 export default SignUp
